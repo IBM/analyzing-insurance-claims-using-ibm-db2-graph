@@ -165,7 +165,11 @@ Run the script to alter [Foreign Keys](data/ForeignKeys.sql).
         * Run `docker pull icr.io/ibm/hdm/db2graph:latest-amd64` from the command line window
     * Run the container
         * Copy the following command to either a terminal window or text editor, but do not run it 
-        `docker run -it --hostname localhost -v /host/machine/path/to/persisted/configuration/directory:/db2graph/ -p 8182:8182 --name=db2graph -e LICENSE=view icr.io/ibm/hdm/db2graph:latest-amd64`
+
+        ```
+        docker run -it --hostname localhost -v /host/machine/path/to/persisted/configuration/directory:/db2graph/ -p 8182:8182 --name=db2graph -e LICENSE=view icr.io/ibm/hdm/db2graph:latest-amd64
+        ```
+
         * Set the value of `hostname_from_host_machine` to match the hostname of the system you are executing the command on. The hostname value is used when generating the openssl certificate on the first run of the container.
         * Set the value of `/host/machine/path/to/persisted/configuration/directory` to a location for Db2 Graph to persist files on the host machine
         * Run the updated command in your terminal
