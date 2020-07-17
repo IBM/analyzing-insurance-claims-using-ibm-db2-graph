@@ -1,0 +1,140 @@
+{
+    "nodes": [
+        {
+            "title": "high_risk",
+            "color": "aqua",
+            "id": "DEMO.POLICYHOLDER::PH3759",
+            "label": "Policyholder PH3759",
+            "group": "high_risk",
+            "value": 100
+        },
+        {
+            "title": "low_risk",
+            "color": "green",
+            "id": "DEMO.POLICYHOLDER::PH1",
+            "label": "Policyholder PH1",
+            "group": "low_risk",
+            "value": 2
+        },
+        {
+            "title": "low_risk",
+            "color": "green",
+            "id": "DEMO.POLICYHOLDER::PH11283",
+            "label": "Policyholder PH11283",
+            "group": "low_risk",
+            "value": 5
+        },
+        {
+            "title": "low_risk",
+            "color": "green",
+            "id": "DEMO.POLICYHOLDER::PH11328",
+            "label": "Policyholder PH11328",
+            "group": "low_risk",
+            "value": 7
+        },
+        {
+            "title": "high_risk",
+            "color": "red",
+            "id": "DEMO.POLICYHOLDER::PH5",
+            "label": "Policyholder PH5",
+            "group": "high_risk",
+            "value": 96
+        },
+        {
+            "title": "medium_risk",
+            "color": "#FFAD73",
+            "id": "DEMO.POLICYHOLDER::PH512",
+            "label": "Policyholder PH512",
+            "group": "medium_risk",
+            "value": 25
+        },
+        {
+            "title": "high_risk",
+            "color": "red",
+            "id": "DEMO.POLICYHOLDER::PH52532",
+            "label": "Policyholder PH52532",
+            "group": "high_risk",
+            "value": 85
+        },
+        {
+            "title": "medium_risk",
+            "color": "#FFAD73",
+            "id": "DEMO.POLICYHOLDER::PH1569",
+            "label": "Policyholder PH1569",
+            "group": "medium_risk",
+            "value": 31
+        },
+        {
+            "title": "medium_risk",
+            "color": "#FFAD73",
+            "id": "DEMO.POLICYHOLDER::PH4722",
+            "label": "Policyholder PH4722",
+            "group": "medium_risk",
+            "value": 36
+        },
+        {
+            "title": "high_risk",
+            "color": "red",
+            "id": "DEMO.POLICYHOLDER::PH4731",
+            "label": "Policyholder PH4731",
+            "group": "high_risk",
+            "value": 75
+        }
+    ],
+    "edges": [
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH1",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH11283",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH11328",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH5",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH512",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.POLICYHOLDER::PH52532",
+            "title": "Policyholder PH3759",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH512",
+            "to": "DEMO.POLICYHOLDER::PH1569",
+            "title": "Policyholder PH512",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH1569",
+            "to": "DEMO.POLICYHOLDER::PH4722",
+            "title": "Policyholder PH1569",
+            "color": "blue"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH1569",
+            "to": "DEMO.POLICYHOLDER::PH4731",
+            "title": "Policyholder PH1569",
+            "color": "blue"
+        }
+    ]
+}
