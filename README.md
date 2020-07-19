@@ -46,7 +46,7 @@ The theme of this code pattern is built around data of a insurance provider, whi
 1. [Create schemas and load data](#3-create-schemas-and-load-data)
 1. [Run IBM Db2 Graph locally](#4-run-ibm-db2-graph-locally)
 1. [Connect IBM Db2 graph with IBM Db2 database](#5-connect-ibm-db2-graph-with-ibm-db2-database)
-1. [Open gremlin console and run queries](#6-open-gremlin-console-and-run-queries)
+1. [Run gremlin queries](#6-run-gremlin-queries)
 1. [Install Anaconda environment to run notebooks](#7-instal-anaconda-environment-to-run-notebooks)
 1. [Configure IBM Db2 driver](#8-configure-ibm-db2-driver)
 1. [Run Notebooks to view visualizations](#9-run-notebooks-to-view-visualizations)
@@ -197,6 +197,75 @@ To access  IBM Db2 database from Db2 Graph that you created in previous step, yo
 
 ![db2 graph add](doc/source/images/db2-add.png)
 
+## 6. Run gremlin queries
 
+Db2 Graph also includes the gremlin-console which is a REPL (read-eval-print-loop) console for gremlin queries. While the gremlin console allows you to interact with Db2 Graph, normally you would develop an external application, using Jupyter Notebook, Python, JavaScript or any of the programming languages supported by Tinkerpop to execute graph queries. The gremlin console has been pre-configured to support connecting to the server included with the Db2 Graph container. To access the console run:
+
+* `docker exec -it db2graph /db2graph_container_files/gremlin-console/bin/gremlin.sh`
+* Once you are inside the gremlin-console you can connect to the server by running:
+    * `:remote connect tinkerpop.server /db2graph/gremlin/remote-secure.yaml`
+    * `:remote console`
+* These commands open a session with the server and allow you to execute queries against the graphs that you added with `docker exec -it db2graph manage add`. Db2 Graph automatically opens a traversal for each graph that you have added with the name that you gave to it, and these are already available for use when you establish a remote connection. For example, if you added a graph called insuracen in step 5,  you can execute queries such as:
+    * `insurance.V().hasLabel('DEMO.CLAIM').has('CLAIM_ID', 'C4377')`
+    * The above query will give you a claim with id `C4377`
+
+## 7. Install Anaconda environment to run notebooks
+
+### Python Setup
+The IBM Db2 Graph sample data contains a set of Jupyter Notebooks to run graph queries and visualize the results. There are specific package versions required for these notebooks and it is recommended you use [miniconda](https://docs.conda.io/en/latest/miniconda.html) to create a graph demo environment:
+
+Run the following commands
+* conda update conda
+There is a current open defect with conda that may affect MacOS users. The workaround is to create a symlink in your conda installation:
+```
+cd <path_to_miniconda>/lib && ln -s libffi.dylib libffi.6.dylib
+ex: cd ~/miniconda3/lib && ln -s libffi.dylib libffi.6.dylib
+
+conda create -n graphdemo python=3.6
+
+conda activate graphdemo
+
+pip install --no-cache-dir gremlinpython==3.4.4 ibm_db pandas jupyterhub==0.8.1 notebook==5.7.8 nbfinder 
+
+```
+
+## 8. Configure IBM Db2 driver
+
+IBM Db2 driver (ibm_db) requires gcc. Ensure gcc is installed prior to executing.
+If you are using MacOS please see https://github.com/ibmdb/python-ibmdb/blob/master/IBM_DB/ibm_db/README.md#issues-with-mac-os-x for proper setup of the Python Db2 driver. Note that the library location is relative to the conda install, for example export DYLD_LIBRARY_PATH=/Users/<user>/miniconda3/envs/graphdemo/lib/python3.6/site-packages/clidriver/lib
+    
+```
+cd <directory where you extracted the the sample notebooks>
+jupyter notebook
+```
+If you are hosting the demo on a remote machine make sure the remote machine is setup to forward connections to the jupyter notebook server.
+Before proceeding to run any of the notebooks you need to edit the connect_info notebook and provide the Db2 graph server and Db2 database server connection information.
+
+You can access the notebooks from URL:
+`http://localhost:8888`
+
+## 9. Run Notebooks to view visualizations
+
+The repository contains two notebooks that we will be using for connecting to IBM Db2 graph and visualization.
+
+### 1. Prepare connection details
+
+In [connect_info.ipynb](notebooks/connect_info.ipynb), it contains credentials to connect to IBM Db2 database on cloud and IBM db2 graph that you have saved and configured on previous steps. Fill in the details and run the notebook.
+
+![Connection Info](doc/source/images/connect_info.png)
+
+### 2. Run the visualization details
+
+In [InsuranceClaimVisualizations.ipynb](notebooks/InsuranceClaimVisualizations.ipynb), Run each cells at a time to visualize. Following are the visualization you can see in the notebook.
+
+#### a. Data from db2 that has fraud claims
+
+![Db2 result](doc/source/images/db2-claim-fraud.png)
+
+In this cell output, you will see that Claim 4377 as being suspicious. We can see that the charge for this type of claim is almost 300k over the average charge for this type.
+
+You now need to dig deeper to find out what is going on and we will use Db2 Graph to do that.
+
+#### b. Finding all the claims by the Policyholder
 
 
