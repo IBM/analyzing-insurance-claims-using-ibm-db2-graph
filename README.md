@@ -19,25 +19,26 @@ At the end of this code pattern, users will be able to:
 
 The theme of this code pattern is built around data of a insurance provider, which collects patients, diseases and claims data.
 
-![Architecture](docs/source/images/architecture.png)
-
+![Architecture](doc/source/images/architecture.png)
 
 ## Flow
 1. User loads or use existing data to/from IBM Db2 database.
-2. Connect IBM Db2 Graph to IBM Db2 database.
-3. Run gremlin queries using IBM Db2 Graph.
-4. Analyze the data using Jupyter notebook.
+2. User runs the IBM Db2 Graph docker container
+3. User connects and add IBM Db2 Graph to IBM Db2 database on cloud.
+4. User runs gremlin queries using IBM Db2 Graph.
+4. User analyzes the data using Jupyter notebook.
 
 
 ## Included Components
-* IBM Db2 Graph
-* IBM Db2 Database
-* Apache Tinkerpop
+* IBM Db2 Graph - This is the technology preview version of IBM Db2 Graph.  The link to the container registry is given below in the steps.
+* [IBM Db2 Database](https://www.ibm.com/products/db2-database)
+* [Apache Tinkerpop](https://tinkerpop.apache.org/)
 
 ## Featured Technologies
 * Python
 * Juypter notebook
 * Anaconda
+* IBM Container Registry
 
 ## Steps
 
@@ -266,6 +267,106 @@ In this cell output, you will see that Claim 4377 as being suspicious. We can se
 
 You now need to dig deeper to find out what is going on and we will use Db2 Graph to do that.
 
-#### b. Finding all the claims by the Policyholder
+#### b. Finding all the claims by the policyholder
+
+The graph query to find out all the types of claims filed by an insured is shown below:
+
+```
+    g.V() \
+    .hasLabel('DEMO.CLAIM') \
+    .has('CLAIM_ID', 'C4377') \
+    .out('DEMO.INSURED_OF_CLAIM') \
+    .out('DEMO.HAS_DISEASE') \
+    .path() \
+    .by(__.valueMap(True)) \
+    .toList()
+```
+
+The above  query uses `g` object to perform the following traversal:
+1. Look at vertices with the label 'DEMO.CLAIM'
+2. Filter to the vertex with the 'CLAIM_ID' we are interested in
+3. Traverse to the person who is insured by the claim
+4. Find out what types of diseases they have filed claims on previous
+5. Return the complete path from the claim to the disease
+6. Return all properties for each hop in the path
+7. Convert the gremlin result set into a python list
+
+The output visualization of this query shown below. To create this visualization the notebook uses HTML, CSS and `vis-network` javascript library. You can also see this after running the cells from notebook.
+
+![Claims](doc/source/images/claims.png)
+
+Our starting vertex, Claim 4377, is coloured in blue. From our starting vertex we see a link to the patient associated with this claim, Patient 11279, in orange. From the patient we have links to all the diseases they have filed claims with in red.
+
+We can see that this policy holder is associated with multiple chronic diseases and this may be the reason for the abnormal charge but we can dig further to understand if this is the case.
+
+#### c. Finding all the claims filed by the policyholder
+
+We now know that they have filed a lot of claims, let's take a look at those claims to see if we can find anything interesting.
+
+``` 
+    g.V() \
+    .hasLabel('DEMO.CLAIM') \
+    .has('CLAIM_ID', 'C4377') \
+    .out('DEMO.POLICYHOLDER_OF_CLAIM') \
+    .in_('DEMO.POLICYHOLDER_OF_CLAIM') \
+    .union(__.out('DEMO.INCHARGE_OF_CLAIM').out('DEMO.INCHARGE_DEMO.SERVICE'), __.out('DEMO.INSURED_OF_CLAIM')) \
+    .path() \
+    .by(__.valueMap(True)) \
+    .toList()
+```
+
+This query uses our `g` object to perform the following traversal:
+1. Get the vertices with the label 'DEMO.CLAIM'
+2. Filter to the vertex with the 'CLAIM_ID' we are interested in
+3. Find out who the insured person is
+4. Find out what other claims they have filed
+5. Find out who the doctors that handled the claim are and which service providers those doctors work for
+6. Return the complete path from start to end
+7. Return all properties for each hop in the path
+8. Convert the gremlin result set into a python list
+
+The resulting visualization of the query is shown below:
+
+![Claims](doc/source/images/all-claims.png)
+
+Looking at the result of this graph query we can quickly see that for every claim this person filed they saw a different doctor who worked for a different service provider.
+
+This is seems out of the oridinary and very suspicious.
+
+#### d. Finding policyholder connections related to the claim
+We can dig deeper by looking at the social connections of the policy holder. What other policy holders are directly, or indirectly, connected to the policy holder?
+
+```
+    policy_holder_connections = g.V() \
+    .hasLabel('DEMO.CLAIM') \
+    .has('CLAIM_ID', 'C4377') \
+    .out('DEMO.POLICYHOLDER_OF_CLAIM') \
+    .repeat(__.out('DEMO.POLICYHOLDER_CONNECTION')) \
+    .emit() \
+    .path() \
+    .by(__.valueMap(True)) \
+    .toList()
+
+```
+
+This query uses our `g` object to perform the following traversal:
+1. Start with the claim in question
+2. Find out who the insured person is
+3. Find all their social connections
+4. emit each connection found
+5. Return the complete path from start to end
+6. Return all properties for each hop in the path
+7. Convert the gremlin result set into a python list
+
+![Claims](doc/source/images/connections.png)
+
+On this graph, larger the circles the more high risk the policy holder is. We can see that the policy holder in question (aqua coloured vertex) is directly connected to two other high risk policy holders. They are also connected to a third high risk policy holder by 3 degrees of separation.
+
+There is a very high probability that this claim is fraudulent.
 
 
+# License
+
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
