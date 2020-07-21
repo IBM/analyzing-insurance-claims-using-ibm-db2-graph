@@ -1,0 +1,166 @@
+{
+    "nodes": [
+        {
+            "id": "Claim 4377",
+            "label": "Claim 4377",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.PATIENT::11279",
+            "label": "Patient 11279",
+            "group": "DEMO.PATIENT",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.DISEASE::64572120",
+            "label": "Chronic mental disorder",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572266",
+            "label": "Insulin dependent diabetes mellitus type 1A",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572267",
+            "label": "Insulin dependent diabetes mellitus type 1B",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572324",
+            "label": "Pre-existing type 1 diabetes mellitus",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572326",
+            "label": "Pre-existing type 2 diabetes mellitus",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572327",
+            "label": "Pre-existing type 2 diabetes mellitus in pregnancy",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572377",
+            "label": "Type 1 diabetes mellitus with hyperosmolar coma",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572378",
+            "label": "Type 1 diabetes mellitus with hypoglycemic coma",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572382",
+            "label": "Type 2 diabetes mellitus in nonobese",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572384",
+            "label": "Type 2 diabetes mellitus with acanthosis nigricans",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572386",
+            "label": "Type 2 diabetes mellitus with gangrene",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572387",
+            "label": "Type 2 diabetes mellitus with hyperosmolar coma",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.DISEASE::64572388",
+            "label": "Type 2 diabetes mellitus with hypoglycemic coma",
+            "group": "DEMO.DISEASE",
+            "color": "red"
+        }
+    ],
+    "edges": [
+        {
+            "from": "Claim 4377",
+            "to": "DEMO.PATIENT::11279",
+            "title": "DEMO.PATIENT"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572120",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572266",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572267",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572324",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572326",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572327",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572377",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572378",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572382",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572384",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572386",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572387",
+            "title": "DEMO.DISEASE"
+        },
+        {
+            "from": "DEMO.PATIENT::11279",
+            "to": "DEMO.DISEASE::64572388",
+            "title": "DEMO.DISEASE"
+        }
+    ]
+}

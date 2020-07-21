@@ -1,0 +1,468 @@
+{
+    "nodes": [
+        {
+            "id": "DEMO.POLICYHOLDER::PH3759",
+            "label": "Policyholder PH3759",
+            "group": "DEMO.POLICYHOLDER",
+            "color": "green"
+        },
+        {
+            "id": "DEMO.CLAIM::C3679",
+            "label": "Claim C3679",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI23189",
+            "label": "Dr. FELICIA - S14324",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S14324",
+            "label": "LAMENDOLA Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C4377",
+            "label": "Claim C4377",
+            "group": "DEMO.CLAIM",
+            "color": "red"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI26607",
+            "label": "Dr. CHIQUITA - S16243",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S16243",
+            "label": "QUINTELA Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C96545",
+            "label": "Claim C96545",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI19682",
+            "label": "Dr. CAMMY - S12728",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S12728",
+            "label": "GARASHA Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C28963",
+            "label": "Claim C28963",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI27062",
+            "label": "Dr. TONIE - S14040",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S14040",
+            "label": "KLIMAVICIUS Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C87603",
+            "label": "Claim C87603",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI20309",
+            "label": "Dr. GENESIS - S12031",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S12031",
+            "label": "DORMINEY Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C87278",
+            "label": "Claim C87278",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI21686",
+            "label": "Dr. SHIRLENE - S14867",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S14867",
+            "label": "MARITNEZ Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C26586",
+            "label": "Claim C26586",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI26589",
+            "label": "Dr. SHELBY - S16061",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S16061",
+            "label": "PINCOCK Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C26754",
+            "label": "Claim C26754",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI25385",
+            "label": "Dr. LU - S17370",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S17370",
+            "label": "STANDROD Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C69395",
+            "label": "Claim C69395",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI24058",
+            "label": "Dr. AMANDA - S14814",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S14814",
+            "label": "MANGAN Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C67594",
+            "label": "Claim C67594",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI28611",
+            "label": "Dr. LAVERNE - S16164",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S16164",
+            "label": "PREDOVICH Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C96155",
+            "label": "Claim C96155",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI26294",
+            "label": "Dr. DEANNE - S14803",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S14803",
+            "label": "MALTIE Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        },
+        {
+            "id": "DEMO.CLAIM::C10160",
+            "label": "Claim C10160",
+            "group": "DEMO.CLAIM",
+            "color": "blue"
+        },
+        {
+            "id": "DEMO.INCHARGE::PI26740",
+            "label": "Dr. ARTIE - S18032",
+            "group": "DEMO.INCHARGE",
+            "color": "grey"
+        },
+        {
+            "id": "DEMO.SERVICE::S18032",
+            "label": "VANDERHURST Corp",
+            "group": "DEMO.SERVICE",
+            "color": "orange"
+        }
+    ],
+    "edges": [
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C3679",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C3679",
+            "to": "DEMO.INCHARGE::PI23189",
+            "title": "Claim C3679"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI23189",
+            "to": "DEMO.SERVICE::S14324",
+            "title": "Dr. FELICIA - S14324"
+        },
+        {
+            "from": "DEMO.CLAIM::C3679",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C3679"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C4377",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C4377",
+            "to": "DEMO.INCHARGE::PI26607",
+            "title": "Claim C4377"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI26607",
+            "to": "DEMO.SERVICE::S16243",
+            "title": "Dr. CHIQUITA - S16243"
+        },
+        {
+            "from": "DEMO.CLAIM::C4377",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C4377"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C96545",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C96545",
+            "to": "DEMO.INCHARGE::PI19682",
+            "title": "Claim C96545"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI19682",
+            "to": "DEMO.SERVICE::S12728",
+            "title": "Dr. CAMMY - S12728"
+        },
+        {
+            "from": "DEMO.CLAIM::C96545",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C96545"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C28963",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C28963",
+            "to": "DEMO.INCHARGE::PI27062",
+            "title": "Claim C28963"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI27062",
+            "to": "DEMO.SERVICE::S14040",
+            "title": "Dr. TONIE - S14040"
+        },
+        {
+            "from": "DEMO.CLAIM::C28963",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C28963"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C87603",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C87603",
+            "to": "DEMO.INCHARGE::PI20309",
+            "title": "Claim C87603"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI20309",
+            "to": "DEMO.SERVICE::S12031",
+            "title": "Dr. GENESIS - S12031"
+        },
+        {
+            "from": "DEMO.CLAIM::C87603",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C87603"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C87278",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C87278",
+            "to": "DEMO.INCHARGE::PI21686",
+            "title": "Claim C87278"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI21686",
+            "to": "DEMO.SERVICE::S14867",
+            "title": "Dr. SHIRLENE - S14867"
+        },
+        {
+            "from": "DEMO.CLAIM::C87278",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C87278"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C26586",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C26586",
+            "to": "DEMO.INCHARGE::PI26589",
+            "title": "Claim C26586"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI26589",
+            "to": "DEMO.SERVICE::S16061",
+            "title": "Dr. SHELBY - S16061"
+        },
+        {
+            "from": "DEMO.CLAIM::C26586",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C26586"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C26754",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C26754",
+            "to": "DEMO.INCHARGE::PI25385",
+            "title": "Claim C26754"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI25385",
+            "to": "DEMO.SERVICE::S17370",
+            "title": "Dr. LU - S17370"
+        },
+        {
+            "from": "DEMO.CLAIM::C26754",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C26754"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C69395",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C69395",
+            "to": "DEMO.INCHARGE::PI24058",
+            "title": "Claim C69395"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI24058",
+            "to": "DEMO.SERVICE::S14814",
+            "title": "Dr. AMANDA - S14814"
+        },
+        {
+            "from": "DEMO.CLAIM::C69395",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C69395"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C67594",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C67594",
+            "to": "DEMO.INCHARGE::PI28611",
+            "title": "Claim C67594"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI28611",
+            "to": "DEMO.SERVICE::S16164",
+            "title": "Dr. LAVERNE - S16164"
+        },
+        {
+            "from": "DEMO.CLAIM::C67594",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C67594"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C96155",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C96155",
+            "to": "DEMO.INCHARGE::PI26294",
+            "title": "Claim C96155"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI26294",
+            "to": "DEMO.SERVICE::S14803",
+            "title": "Dr. DEANNE - S14803"
+        },
+        {
+            "from": "DEMO.CLAIM::C96155",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C96155"
+        },
+        {
+            "from": "DEMO.POLICYHOLDER::PH3759",
+            "to": "DEMO.CLAIM::C10160",
+            "title": "Policyholder PH3759"
+        },
+        {
+            "from": "DEMO.CLAIM::C10160",
+            "to": "DEMO.INCHARGE::PI26740",
+            "title": "Claim C10160"
+        },
+        {
+            "from": "DEMO.INCHARGE::PI26740",
+            "to": "DEMO.SERVICE::S18032",
+            "title": "Dr. ARTIE - S18032"
+        },
+        {
+            "from": "DEMO.CLAIM::C10160",
+            "to": "DEMO.PATIENT::11279",
+            "title": "Claim C10160"
+        }
+    ]
+}
