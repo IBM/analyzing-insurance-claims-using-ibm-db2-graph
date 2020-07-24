@@ -1,4 +1,4 @@
->Note: This readme is based on the technological review release of IBM Db2 graph. You can visit IBM tech note for details: https://supportcontent.ibm.com/support/pages/technology-preview-ibm-db2-graph . The tech note will require you to login using your IBM account.
+>Note: This readme is based on the technology preview release of IBM Db2 graph. You can visit IBM tech note for details: https://supportcontent.ibm.com/support/pages/technology-preview-ibm-db2-graph . The tech note will require you to login using your IBM account.
 
 # Analyzing insurance claims using IBM Db2 graph
 
